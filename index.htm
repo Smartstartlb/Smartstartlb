@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Redirection</title>
+    <link rel="icon" type="image/x-icon" href="./Smartstart.ico">
+    <title>SmartStartLB</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,10 +14,10 @@
         }
 
         header {
-            background-color: #333;
+            background-color: #0079e0;
             color: #fff;
-            padding: 10px;
             text-align: center;
+            padding: 1.5rem 0;
         }
 
         .container {
@@ -45,7 +46,42 @@
             padding: 10px;
             border-radius: 5px;
         }
+        header>div>h4 {
+            padding: 0px;
+            margin: 0;
+            font-family: math;
+            font-size: 16px;
+            color: #d1e3f0;
+            text-shadow: -5px 5px 6px #d1e3f0;
+            animation-name: fadeAnimation;
+            animation-duration: 4s;
+            /* animation-delay:4s ; */
 
+        }
+        header>div>h1 {
+            margin: 0.45em;
+            font-weight: 900;
+            font-family: inherit;
+            
+        }
+        header>div{
+            animation-name: scaleAnimation;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            
+        }
+
+        @keyframes scaleAnimation {
+            0% {scale:0;}
+            50% {scale: 1.5 ;}
+            100% {scale: 1;}
+        }
+        @keyframes fadeAnimation {
+            0% {visibility: hidden ;}
+            99% {visibility: hidden ;}            
+            100% {visibility: visible;}
+        }
         .link-list li a:hover {
             background-color: #0056b3;
         }
@@ -53,7 +89,10 @@
 </head>
 <body>
     <header>
-        <h1>Link Redirection</h1>
+        <div>
+            <h1>SmartStartLB</h1>
+            <h4>Your path to financial freedom.</h4>
+        </div>
     </header>
     <div class="container">
         <ul class="link-list" id="linkList">
