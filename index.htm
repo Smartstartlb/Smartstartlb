@@ -103,7 +103,10 @@
     <script>
         Object.defineProperty(String.prototype, 'capitalize', {
   value: function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
+      const  words = this.split(' ');
+      var newstring="":
+    words.forEach((element) => newstring = element.charAt(0).toUpperCase() + element.slice(1)) ;
+     return newstring;
   },
   enumerable: false
 });
