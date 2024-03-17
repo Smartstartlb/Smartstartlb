@@ -101,6 +101,12 @@
     </div>
 
     <script>
+        Object.defineProperty(String.prototype, 'capitalize', {
+  value: function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+  },
+  enumerable: false
+});
         const linkList = document.getElementById('linkList');
 
         // Function to add a link to the list
@@ -108,7 +114,7 @@
             const listItem = document.createElement('li');
             const link = document.createElement('a');
             link.href = url;
-            link.textContent = name;
+            link.textContent = name.capitalize();
             listItem.appendChild(link);
             linkList.appendChild(listItem);
         }
@@ -120,7 +126,7 @@
                 "Enroll in my free Udemy course.":"https://www.udemy.com/course/start-trading-forex-from-scratch-your-a-to-z-guide/?referralCode=F84F9C7F7DECD016F08B",
                 "Private mentorship.":"https://wa.me/96171247989?text=Greetings,%20i%20would%20like%20to%20know%20more%20about%20your%20private%20mentorship.",
                 "Open a trading account with us.":"https://my.tickmill.com?utm_campaign=ib_link&utm_content=IB54633364&utm_medium=Open+Account&utm_source=link&lp=https%3A%2F%2Fmy.tickmill.com%2Fen%2Fsign-up",
-                "subscribe to my Automated Copy Trading service.":"https://tck.tradingsocial.net/portal/registration/subscription?provider=1669&lang=en&wlid=33fdf2b9-9956-4c0d-8135-ad62c4f0485bgement%20service.",
+                "Subscribe to my Automated Copy Trading service.":"https://tck.tradingsocial.net/portal/registration/subscription?provider=1669&lang=en&wlid=33fdf2b9-9956-4c0d-8135-ad62c4f0485bgement%20service.",
                // "Open a trading account with us!":"https://vc.cabinet.oneroyal.com/links/go/6112",
             }
         ;
