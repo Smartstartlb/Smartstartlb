@@ -37,6 +37,9 @@
         .link-list li {
             margin-bottom: 10px;
         }
+        a{
+            text-transform:capitalize
+        }
 
         .link-list li a {
             display: block;
@@ -101,15 +104,7 @@
     </div>
 
     <script>
-        Object.defineProperty(String.prototype, 'capitalize', {
-  value: function() {
-      const  words = this.split(' ');
-      var newstring="":
-    words.forEach((element) => newstring= element.charAt(0).toUpperCase() + element.slice(1)) ;
-     return newstring;
-  },
-  enumerable: false
-});
+        
         const linkList = document.getElementById('linkList');
 
         // Function to add a link to the list
@@ -117,7 +112,7 @@
             const listItem = document.createElement('li');
             const link = document.createElement('a');
             link.href = url;
-            link.textContent = name.capitalize();
+            link.textContent = name;
             listItem.appendChild(link);
             linkList.appendChild(listItem);
         }
